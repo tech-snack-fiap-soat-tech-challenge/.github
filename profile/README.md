@@ -1,4 +1,4 @@
-# 🍔 Bem-vindo ao **Tech Snack - Fast Food**!
+# 🍔 Bem-vindo!
 
  Esta organização centraliza os projetos desenvolvidos durante o Tech Challenge da pós-graduação em Arquitetura de Software da FIAP. 
  Abaixo, você encontrará uma visão geral dos projetos que compõem o sistema de autoatendimento para lanchonetes.
