@@ -1,33 +1,72 @@
-# 🍔 Bem-vindo!
+# 🍔 Welcome to Tech Snack!
 
- Esta organização centraliza os projetos desenvolvidos durante o Tech Challenge da pós-graduação em Arquitetura de Software da FIAP. 
- Abaixo, você encontrará uma visão geral dos projetos que compõem o sistema de autoatendimento para lanchonetes.
+This organization centralizes the projects developed during the Tech Challenge of the Software Architecture postgraduate
+program at FIAP. Below, you'll find an overview of the projects that make up our fast-food self-service system.
 
-## 📂 Projetos
+## 📂 Projects
 
 ### 1. fastfood-infra
-Provisionamento da infraestrutura necessária para o sistema de autoatendimento de fast food utilizando Terraform e serviços de nuvem AWS.
+Infrastructure provisioning, necessary for the fast-food self-service system using Terraform and AWS cloud services.
 
-- **Módulos Terraform:** Cognito, Compute (EKS), Database (RDS), Gateway (API Gateway), Lambda
-- **Objetivo:** Criar uma infraestrutura escalável e automatizada para suportar o sistema de pedidos
+- **Terraform Modules:** Cognito, Compute (EKS), Database (RDS), Gateway (API Gateway), Lambda
+- **Objective:** Create a scalable and automated infrastructure to support the ordering system
 
-[Mais detalhes](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-infra)
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-infra)
 
-### 2. fiap-fast-food
-Sistema de controle de pedidos para lanchonetes, projetado para melhorar a eficiência e a satisfação do cliente através de um sistema de autoatendimento.
+### 2. fastfood-order-service
+Microservice responsible for managing the order lifecycle, from creation to completion.
 
-- **Tecnologias:** Node.js, Docker, PostgreSQL
-- **Funcionalidades:** Gestão de pedidos, pagamento via QR Code, painel administrativo
+- **Technologies:** NestJS, TypeScript, and DynamoDB
+- **Features:** Order creation, status tracking, order history management
 
-[Mais detalhes](https://github.com/tech-snack-fiap-soat-tech-challenge/fiap-fast-food)
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-order-service)
 
-### 3. fastfood-auth-lambda
-Lambda de autenticação para o sistema de pedidos de fast food. Este projeto gerencia o fluxo de registro e login de usuários utilizando Amazon Cognito e CPF como identificador único.
+### 3. fastfood-checkout-service
+Microservice that handles payment processing and checkout flow for orders.
 
-- **Tecnologias:** Node.js, Amazon Cognito, AWS Lambda
-- **Funcionalidades:** Cadastro e login de usuários via CPF, geração de token JWT
+- **Technologies:** NestJS, TypeScript, TypeORM, and PostgreSQL
+- **Features:** Payment processing, integration with payment gateways, transaction management
 
-[Mais detalhes](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-auth-lambda)
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-checkout-service)
 
+### 4. fastfood-customer-service
+Microservice for customer management and user profile operations.
 
+- **Technologies:** NestJS, TypeScript, TypeORM, and PostgreSQL
+- **Features:** Customer registration, profile management, customer loyalty programs
 
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-customer-service)
+
+### 5. fastfood-product-service
+Microservice that manages the product catalog, categories, and inventory.
+
+- **Technologies:** NestJS, TypeScript, TypeORM, and PostgreSQL
+- **Features:** Product catalog management, inventory tracking, pricing management
+
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-product-service)
+
+### 6. fastfood-auth-lambda
+Authentication Lambda for the fast-food ordering system. This project manages user registration and login 
+flow using Amazon Cognito and CPF as a unique identifier.
+
+- **Technologies:** Node.js, Amazon Cognito, AWS Lambda
+- **Features:** User registration and login via CPF, JWT token generation
+
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-auth-lambda)
+
+### 7. fastfood-app
+Initial monolithic application for the fast-food self-service system, designed to improve efficiency and customer satisfaction.
+
+- **Technologies:** Node.js, Docker, PostgreSQL
+- **Features:** Order management, QR Code payment, administrative panel
+
+[More details](https://github.com/tech-snack-fiap-soat-tech-challenge/fastfood-app)
+
+## 🏗️ Architecture
+
+Our project follows a microservice architecture pattern, with each service responsible for a specific domain within the fast-food self-service ecosystem. 
+All services are deployed on AWS using infrastructure-as-code principles through Terraform.
+
+## 🚀 Getting Started
+
+To run the entire project locally, please refer to the instructions in each repository's individual README file.
